@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi Portafolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a2d042d5d3.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -15,49 +16,117 @@
 </head>
 <body class="bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white min-h-screen font-[Inter]">
 
-    <section class="p-6 max-w-5xl mx-auto mt-10">
-        <div class="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl shadow-xl p-6 flex flex-col md:flex-row items-center gap-8">
-          
-          <!-- Imagen -->
-          <div class="flex-shrink-0">
-            <img src="tu-foto.jpg" alt="Foto" class="w-40 h-40 rounded-xl object-cover shadow-lg border-4 border-indigo-300">
-          </div>
-      
-          <!-- Texto -->
-          <div>
-            <h2 class="text-white text-3xl font-bold mb-2">About Me</h2>
-            <p class="text-gray-200">Hi, I’m <strong>Ingrid</strong>, a UX/UI Designer and Frontend Developer from Peru.</p>
-            <p class="text-gray-300 mt-2">I love creating intuitive interfaces and beautiful digital experiences that are responsive and accessible.</p>
-          </div>
-        </div>
-      </section>
+  <!-- NAVBAR -->
+    <header class="bg-[#1f1f24] text-white px-6 py-4 font-mono">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
 
-      <section class="p-6 max-w-5xl mx-auto">
-        <div class="bg-blue-950 rounded-2xl p-6 shadow-lg">
-          <h3 class="text-2xl font-bold text-blue-400 mb-4">Educación</h3>
-          <div class="text-blue-100">
-            <p class="font-semibold">Universidad Nacional Hermilio Valdizan - Ingeniera de Sistemas</p>
-            <p class="text-sm text-blue-300">2017-2021</p>
-          </div>
+        <!-- Logo / Nombre -->
+        <div class="text-xl font-bold tracking-wide text-purple-300">
+          ilandas
         </div>
-      </section>
 
-      <section class="p-6 max-w-5xl mx-auto">
-        <div class="bg-[#1e1e2f] rounded-2xl p-6 shadow-lg">
-          <h3 class="text-2xl font-bold text-purple-400 mb-4">Skills</h3>
-          
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm text-gray-300">
-            <div class="bg-[#2c2c3f] rounded-xl py-4 shadow hover:scale-105 transition">Figma</div>
-            <div class="bg-[#2c2c3f] rounded-xl py-4 shadow hover:scale-105 transition">Adobe XD</div>
-            <div class="bg-[#2c2c3f] rounded-xl py-4 shadow hover:scale-105 transition">Photoshop</div>
-            <div class="bg-[#2c2c3f] rounded-xl py-4 shadow hover:scale-105 transition">Illustrator</div>
-            <div class="bg-[#2c2c3f] rounded-xl py-4 shadow hover:scale-105 transition">HTML</div>
-            <div class="bg-[#2c2c3f] rounded-xl py-4 shadow hover:scale-105 transition">CSS</div>
-            <div class="bg-[#2c2c3f] rounded-xl py-4 shadow hover:scale-105 transition">JavaScript</div>
-            <div class="bg-[#2c2c3f] rounded-xl py-4 shadow hover:scale-105 transition">Tailwind</div>
+        <!-- Menú -->
+        <nav class="hidden md:flex gap-8 text-sm uppercase text-gray-300">
+          <a href="#about" class="hover:text-purple-400 transition">Acerca de mi</a>
+          <a href="#work" class="hover:text-purple-400 transition">Trabajos</a>
+          <a href="#blog" class="hover:text-purple-400 transition">Blog</a>
+          <a href="#contact" class="hover:text-purple-400 transition">Contáctame</a>
+        </nav>
+
+        <!-- Responsive icon (opcional si deseas hacer menú hamburguesa después) -->
+        <div class="md:hidden">
+          <button>
+            <svg class="w-6 h-6 text-purple-300" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="min-h-screen bg-[#1f1f24] flex items-center justify-center px-6 py-10 font-mono">
+      <div class="bg-[#2a2a31] rounded-[30px] w-full max-w-6xl shadow-lg p-10 md:flex md:items-center md:justify-between relative overflow-hidden">
+
+        <!-- Decoración esquina superior derecha -->
+        <div class="absolute top-0 right-0 w-24 h-24 bg-purple-400 rounded-bl-[40px] flex items-center justify-center">
+          <div class="grid grid-cols-3 gap-1">
+            <span class="w-2 h-2 bg-[#1f1f24] rounded-full"></span>
+            <span class="w-2 h-2 bg-[#1f1f24] rounded-full"></span>
+            <span class="w-2 h-2 bg-[#1f1f24] rounded-full"></span>
+            <span class="w-2 h-2 bg-[#1f1f24] rounded-full"></span>
+            <span class="w-2 h-2 bg-[#1f1f24] rounded-full"></span>
+            <span class="w-2 h-2 bg-[#1f1f24] rounded-full"></span>
           </div>
         </div>
-      </section>
+
+        <!-- Foto redonda -->
+        <div class="relative w-48 h-48 md:w-56 md:h-56 mx-auto md:mx-0 mb-8 md:mb-0">
+          <div class="absolute inset-0 bg-purple-500 rounded-full -rotate-12"></div>
+          <img src="tu-foto.jpg" alt="Foto" class="relative z-10 rounded-full border-4 border-white w-full h-full object-cover">
+        </div>
+
+        <!-- Texto -->
+        <div class="text-center md:text-left text-white max-w-md">
+          <h1 class="text-4xl md:text-5xl font-bold mb-3">Hello World!</h1>
+          <p class="text-sm text-gray-300 mb-6">
+            Soy <span class="text-purple-300 font-semibold">Ingrid Landa</span>, soy UX/UI designer y frontend developer.
+          </p>
+          <a href="tu-cv.pdf" download class="inline-block bg-purple-500 text-white px-6 py-2 rounded-md hover:bg-purple-600 transition">
+            Download CV
+          </a>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="absolute bottom-4 right-6 flex gap-4 text-purple-300 text-xl">
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="bg-[#1f1f24] text-white py-16 px-6 font-mono">
+    <div class="max-w-6xl mx-auto rounded-[30px] bg-[#2a2a31] p-10 shadow-lg">
+
+      <!-- Título -->
+      <h2 class="text-3xl md:text-4xl font-bold text-purple-400 mb-6 text-center">About Me</h2>
+
+      <!-- Descripción -->
+      <p class="text-gray-300 text-center max-w-3xl mx-auto mb-10">
+        I’m a passionate <span class="text-purple-300 font-semibold">UX/UI Designer</span> and <span class="text-purple-300 font-semibold">Frontend Developer</span> who loves creating beautiful, intuitive interfaces and bringing them to life with clean code.
+      </p>
+
+      <!-- Grid de habilidades -->
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- UX/UI Designer -->
+        <div class="bg-[#1f1f24] border border-purple-700 rounded-2xl p-6 shadow-inner">
+          <h3 class="text-xl font-bold text-purple-300 mb-4">🎨 UX/UI Designer</h3>
+          <ul class="flex flex-wrap gap-4 text-sm text-white">
+            <li class="bg-purple-700 px-4 py-1 rounded-full">Figma</li>
+            <li class="bg-purple-700 px-4 py-1 rounded-full">Adobe Illustrator</li>
+            <li class="bg-purple-700 px-4 py-1 rounded-full">Photoshop</li>
+          </ul>
+        </div>
+
+        <!-- Frontend Developer -->
+        <div class="bg-[#1f1f24] border border-purple-700 rounded-2xl p-6 shadow-inner">
+          <h3 class="text-xl font-bold text-purple-300 mb-4">💻 Frontend Developer</h3>
+          <ul class="flex flex-wrap gap-4 text-sm text-white">
+            <li class="bg-purple-700 px-4 py-1 rounded-full">HTML</li>
+            <li class="bg-purple-700 px-4 py-1 rounded-full">CSS</li>
+            <li class="bg-purple-700 px-4 py-1 rounded-full">JavaScript</li>
+            <li class="bg-purple-700 px-4 py-1 rounded-full">Vue</li>
+            <li class="bg-purple-700 px-4 py-1 rounded-full">Tailwind CSS</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
       <footer class="p-6 max-w-5xl mx-auto text-center text-gray-400 text-sm mt-10">
         <p>Contacto: <a href="mailto:tucorreo@example.com" class="text-purple-400 hover:underline">ilandasantiago@gmail.com</a></p>
